@@ -18,6 +18,11 @@ function App() {
       setAlert(null);
     },1500)
   }
+  const error = (selecterror)=>{
+    if (selecterror === 'error'){
+      showAlert("You selected wrong sentence" , "warning");
+    }
+  }
   const togglmode = ()=>{
     if (mode === 'light'){
       setMode('dark');
@@ -35,7 +40,7 @@ function App() {
     <Navbar logo={logo} mode={mode} togglmode={togglmode}/>
     <Alert alert={alert}/>
     <div className="container mb-3">
-      <TextForm heading="Enter a Text to Analyze" mode={mode} />
+      <TextForm heading="Enter a Text to Analyze" mode={mode} error={error} />
     </div>
     </>
   );
