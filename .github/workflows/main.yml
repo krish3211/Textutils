@@ -26,8 +26,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "krish3211"
+          git config --global user.email "krishnapavan3211@gmail.com"
 
       - name: Build and Deploy
         run: npm run deploy  # This runs the 'predeploy' and 'deploy' scripts
