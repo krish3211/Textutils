@@ -26,11 +26,6 @@ jobs:
           npm install
           npm install gh-pages --save-dev  # Install gh-pages as a development dependency
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "krish3211"
-          git config --global user.email "krishnapavan3211@gmail.com"
-
       - name: Build the app
         run: npm run build
 
