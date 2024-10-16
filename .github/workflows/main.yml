@@ -1,4 +1,4 @@
-name: React.js Ci/CD
+name: React.js CI/CD
 
 on:
   push:
@@ -31,7 +31,11 @@ jobs:
           git config --global user.name "krish3211"
           git config --global user.email "krishnapavan3211@gmail.com"
 
-      - name: Build and Deploy
-        run: npm run deploy
+      - name: Build the app
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        run: |
+          npx gh-pages -d build
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for deployment
